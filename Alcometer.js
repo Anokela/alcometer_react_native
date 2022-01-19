@@ -67,11 +67,6 @@ export default function Alcometer() {
     let grams = litres * 8 * 4.5;
     let burning = weight / 10;
     let grams_left = grams - (burning * time);
-    console.log(weight);
-    console.log(litres);
-    console.log(grams);
-    console.log(burning);
-    console.log(grams_left);
 
     if (gender === 'male') {
       result = grams_left / (weight * 0.7);
