@@ -8,6 +8,7 @@ import RadioButton from './RadioButton.js';
 import constants from '../Data/Constants';
 
 
+
 export default function Alcometer() {
   const [weight, setWeight] = useState('');
   const [bottle, setBottle] = useState(1);
@@ -144,7 +145,7 @@ export default function Alcometer() {
         </View>
         <View style={styles.buttonContainer}>
           <Button color="skyblue" onPress={calculate} title='Calculate'></Button>
-        </View> 
+        </View>
     </View>
   );
 }

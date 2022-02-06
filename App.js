@@ -1,20 +1,19 @@
-import { View, ScrollView } from 'react-native-web';
+import { View, ScrollView } from 'react-native';
 import Alcometer from './Components/Alcometer.js';
-import Header  from './Components/Header';
+import Header from './Components/Header';
 import Footer from './Components/Footer';
 import styles from './styles/Styles';
-
 
 export default function App() {
 
   return (
-    <View style={styles.container}>
-      <ScrollView >
+      <View style={styles.container}>
         <Header />
-        <Alcometer />
-        <Footer />
-      </ScrollView>
-    </View>
+        <ScrollView>
+          <Alcometer />
+          <Footer />
+        </ScrollView>
+      </View>
   );
 }
 
