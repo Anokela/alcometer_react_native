@@ -4,7 +4,8 @@ import { Text, View, TextInput, Button, ScrollView, Alert } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import styles from '../styles/Styles.js';
 import RadioButton from './RadioButton.js';
-import constants from '../Data/Constants'
+// import constants for rendering the options for radiobutton and for bottles and time pickers. 
+import constants from '../Data/Constants';
 
 
 export default function Alcometer() {
@@ -16,10 +17,10 @@ export default function Alcometer() {
   const [showResult, setShowResult] = useState(false);
 
   
-  const genders = [
+  /* const genders = [
     { label: 'Male', value: 'male'},
     { label: 'Female', value: 'female'}
-  ];
+  ]; */
 
   /* const bottles = Array();
   bottles.push({ label: '1 bottle', value: 1 });
@@ -52,7 +53,8 @@ export default function Alcometer() {
   hours.push({ label: '11 hours', value: 11 });
   hours.push({ label: '12 hours', value: 12 }); */
 
-
+  // implementing the alert to show when user tries to do calculation without inputting the weight.
+  // This way of alertin seems not to work on webview. On could use javascrip alert() instead.
   const showAlert = () => {
     Alert.alert(
       "No weight entered.",
@@ -85,14 +87,13 @@ export default function Alcometer() {
       setBloodAlcohol(result.toFixed(2));
 
     } else {
-      //alert('Please enter your weight!')
-      showAlert();
+      //alert('Please enter your weight!') // works also on webview
+      showAlert(); // This way seems not to work on webview but works on mobilephone (expoGo)
     }
   }
   return (
-    <View style={styles.container}>
-      <ScrollView >
-        <Text style={styles.header}>Alcometer</Text>
+    <View>
+      {/*   <Text style={styles.header}>Alcometer</Text> */}
         <View style={styles.field}>
           <Text style={styles.text}>Weight:</Text>
           <TextInput
@@ -128,20 +129,12 @@ export default function Alcometer() {
         </View >
         <View style={styles.field} >
           <Text style={styles.text}>Gender: </Text>
-          <RadioButton options={genders} onPress={(value) => {setGender(value)}}></RadioButton>
+          <RadioButton options={constants.genders} onPress={(value) => {setGender(value)}}></RadioButton>
         </View>
-         {/*  <Text>Gender</Text>
-         { <RadioForm
-            style={StyleSheet.radio}
-            buttonSize={10}
-            radio_props={genders}
-            initial={0}
-            onPress={(value) => { setGender(value) }}
-          />} */}
         <View  style={styles.field}>
           <Text style={styles.text}>Calculated blood alcohol: </Text>
         {showResult && (
-        <View>
+        <View style={styles.result}>
           
           {bloodAlcohol == 0 ?
           <Text style={styles.text_green}>{bloodAlcohol} ‰</Text> :
@@ -150,9 +143,8 @@ export default function Alcometer() {
         )}
         </View>
         <View style={styles.buttonContainer}>
-          <Button color="green" onPress={calculate} title='Calculate'></Button>
+          <Button color="skyblue" onPress={calculate} title='Calculate'></Button>
         </View> 
-      </ScrollView>
     </View>
   );
 }

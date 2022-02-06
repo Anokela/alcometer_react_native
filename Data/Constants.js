@@ -30,4 +30,9 @@ const bottles = [
     { label: '12 hours', value: 12 },
   ];
 
-  export default {bottles, hours};
+  const genders = [
+    { label: 'Male', value: 'male'},
+    { label: 'Female', value: 'female'}
+  ];
+
+  export default {bottles, hours, genders};

@@ -5,12 +5,12 @@ export default StyleSheet.create({
         flex: 1,
         paddingTop: 30,
     },
-        header: {
+   /*      header: {
         textAlign: 'center',
         fontSize: 30,
         fontWeight:'bold',
         color: 'lightblue',
-    },
+    }, */
     field: {
         margin: 10,
     },
@@ -37,9 +37,40 @@ export default StyleSheet.create({
     text: {
         marginBottom: 10,
     },
+    result: {
+        marginLeft: 20,
+    },
     buttonContainer: {
         width: '80%',
         alignSelf: 'center',
+        marginBottom: 20,
     },
+    header: {
+        marginTop: 30,
+        marginBottom: 15,
+        backgroundColor: 'skyblue',
+        flexDirection: 'row',
+      },
+      footer: {
+        marginTop: 20,
+        backgroundColor: 'skyblue',
+        flexDirection: 'row'
+      },
+      title: {
+        color: '#fff',
+        fontWeight: 'bold',
+        flex: 1,
+        fontSize: 23,
+        textAlign: 'center',
+        margin: 10,
+      },
+      author: {
+        color: '#fff',
+        fontWeight: 'bold',
+        flex: 1,
+        fontSize: 15,
+        textAlign: 'center',
+        margin: 10,
+      },
 
   });
