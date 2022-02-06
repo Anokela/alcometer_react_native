@@ -1,6 +1,4 @@
-
-import {ScrollView } from 'react-native';
-import Alcometer from './Alcometer.js';
+import Alcometer from './Components/Alcometer.js';
 
 
 export default function App() {

@@ -9,19 +9,21 @@ export default StyleSheet.create({
         textAlign: 'center',
         fontSize: 30,
         fontWeight:'bold',
+        color: 'lightblue',
     },
     field: {
         margin: 10,
     },
     input: {
         marginLeft: 10,
-    },
-    radio: {
-        marginTop: 10,
-        marginBottom: 10,
-    },  
+        borderStyle: 'solid',
+        borderColor:'black',
+        borderRadius: 5,
+        borderWidth: 1,
+        padding: 3,
+    }, 
     text_green: {
-        color:'green',
+        color:'#258e25',
         fontSize: 25,
     },
     text_yellow: {
@@ -32,5 +34,12 @@ export default StyleSheet.create({
         color:'red',
         fontSize: 25,
     },
-  
+    text: {
+        marginBottom: 10,
+    },
+    buttonContainer: {
+        width: '80%',
+        alignSelf: 'center',
+    },
+
   });
