@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 30,
     },
    /*      header: {
         textAlign: 'center',
@@ -46,7 +45,6 @@ export default StyleSheet.create({
         marginBottom: 20,
     },
     header: {
-        marginTop: 30,
         marginBottom: 15,
         backgroundColor: 'skyblue',
         flexDirection: 'row',
@@ -54,7 +52,8 @@ export default StyleSheet.create({
       footer: {
         marginTop: 20,
         backgroundColor: 'skyblue',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        paddingBottom: 35,
       },
       title: {
         color: '#fff',
