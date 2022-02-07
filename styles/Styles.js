@@ -11,6 +11,7 @@ export default StyleSheet.create({
     },
     input: {
         marginLeft: 10,
+        marginRight: 10,
         borderStyle: 'solid',
         borderColor:'black',
         borderRadius: 5,

@@ -14,6 +14,15 @@ const bottles = [
     { label: '13 bottles', value: 13 },
     { label: '14 bottles', value: 14 },
     { label: '15 bottles', value: 15 },
+    { label: '16 bottles', value: 16 },
+    { label: '17 bottles', value: 17 },
+    { label: '18 bottles', value: 18 },
+    { label: '19 bottles', value: 19 },
+    { label: '20 bottles', value: 20 },
+    { label: '21 bottles', value: 21 },
+    { label: '22 bottles', value: 22 },
+    { label: '23 bottles', value: 23 },
+    { label: '24 bottles', value: 24 },
 ]
   const hours = [
     { label: '1 hour', value: 1 },
@@ -28,6 +37,18 @@ const bottles = [
     { label: '10 hours', value: 10 },
     { label: '11 hours', value: 11 },
     { label: '12 hours', value: 12 },
+    { label: '13 hour', value: 13 },
+    { label: '14 hours', value: 14 },
+    { label: '15 hours', value: 15 },
+    { label: '16 hours', value: 16 },
+    { label: '17 hours', value: 17 },
+    { label: '18 hours', value: 18 },
+    { label: '19 hours', value: 19 },
+    { label: '20 hours', value: 20 },
+    { label: '21 hours', value: 21 },
+    { label: '22 hours', value: 22 },
+    { label: '23 hours', value: 23 },
+    { label: '24 hours', value: 24 },
   ];
 
   const genders = [
