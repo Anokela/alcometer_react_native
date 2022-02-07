@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Text, View, TextInput, Button, ScrollView, Alert } from 'react-native';
-// import RadioForm from 'react-native-simple-radio-button';
 import { Picker } from '@react-native-picker/picker';
 import styles from '../styles/Styles.js';
 import RadioButton from './RadioButton.js';
@@ -17,46 +16,9 @@ export default function Alcometer() {
   const [bloodAlcohol, setBloodAlcohol] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
-  
-  /* const genders = [
-    { label: 'Male', value: 'male'},
-    { label: 'Female', value: 'female'}
-  ]; */
-
-  /* const bottles = Array();
-  bottles.push({ label: '1 bottle', value: 1 });
-  bottles.push({ label: '2 bottles', value: 2 });
-  bottles.push({ label: '3 bottles', value: 3 });
-  bottles.push({ label: '4 bottles', value: 4 });
-  bottles.push({ label: '5 bottles', value: 5 });
-  bottles.push({ label: '6 bottles', value: 6 });
-  bottles.push({ label: '7 bottles', value: 7 });
-  bottles.push({ label: '8 bottles', value: 8 });
-  bottles.push({ label: '9 bottles', value: 9 });
-  bottles.push({ label: '10 bottles', value: 10 });
-  bottles.push({ label: '11 bottles', value: 11 });
-  bottles.push({ label: '12 bottles', value: 12 });
-  bottles.push({ label: '13 bottles', value: 13 });
-  bottles.push({ label: '14 bottles', value: 14 });
-  bottles.push({ label: '15 bottles', value: 15 });
-
-  const hours = Array();
-  hours.push({ label: '1 hour', value: 1 });
-  hours.push({ label: '2 hours', value: 2 });
-  hours.push({ label: '3 hours', value: 3 });
-  hours.push({ label: '4 hours', value: 4 });
-  hours.push({ label: '5 hours', value: 5 });
-  hours.push({ label: '6 hours', value: 6 });
-  hours.push({ label: '7 hours', value: 7 });
-  hours.push({ label: '8 hours', value: 8 });
-  hours.push({ label: '9 hours', value: 9 });
-  hours.push({ label: '10 hours', value: 10 });
-  hours.push({ label: '11 hours', value: 11 });
-  hours.push({ label: '12 hours', value: 12 }); */
-
   // implementing the alert to show when user tries to do calculation without inputting the weight.
   // This way of alertin seems not to work on webview. On could use javascrip alert() instead.
-  const showAlert = () => {
+ /*  const showAlert = () => {
     Alert.alert(
       "No weight entered.",
       "Please enter your weight.",
@@ -66,7 +28,7 @@ export default function Alcometer() {
         },
       ]
     );
-  }
+  } */
 
   function calculate() {
     if (weight !== '') {
@@ -88,15 +50,15 @@ export default function Alcometer() {
       setBloodAlcohol(result.toFixed(2));
 
     } else {
-      //alert('Please enter your weight!') // works also on webview
-      showAlert(); // This way seems not to work on webview but works on mobilephone (expoGo)
+      alert('Please enter your weight!') // works also on webview
+      // showAlert(); // This way seems not to work on webview but works on mobilephone (expoGo)
+      return; 
     }
   }
   return (
     <View>
-      {/*   <Text style={styles.header}>Alcometer</Text> */}
         <View style={styles.field}>
-          <Text style={styles.text}>Weight:</Text>
+          <Text style={styles.label}>Weight:</Text>
           <TextInput
             style={styles.input}
             onChangeText={text => setWeight(text)}
@@ -105,7 +67,7 @@ export default function Alcometer() {
           </TextInput>
         </View>
         <View style={styles.field}>
-          <Text style={styles.text}>Bottles:</Text>
+          <Text style={styles.label}>Bottles:</Text>
           <Picker style={styles.input}
             onValueChange={(itemValue) => setBottle(itemValue)}
             selectedValue={bottle}
@@ -117,7 +79,7 @@ export default function Alcometer() {
           </Picker>
         </View >
         <View style={styles.field}>
-          <Text style={styles.text}>Time:</Text>
+          <Text style={styles.label}>Time:</Text>
           <Picker style={styles.input}
             onValueChange={(itemValue) => setTime(itemValue)}
             selectedValue={time}
@@ -129,13 +91,17 @@ export default function Alcometer() {
           </Picker>
         </View >
         <View style={styles.field} >
-          <Text style={styles.text}>Gender: </Text>
-          <RadioButton options={constants.genders} onPress={(value) => {setGender(value)}}></RadioButton>
+          <Text style={styles.label}>Gender: </Text>
+          <RadioButton 
+            options={constants.genders} 
+            onPress={(value) => {setGender(value)}} 
+            style={{backgroundColor: 'skyblue'}}
+          />
         </View>
         <View  style={styles.field}>
-          <Text style={styles.text}>Calculated blood alcohol: </Text>
         {showResult && (
         <View style={styles.result}>
+          <Text style={styles.label}>Calculated blood alcohol: </Text>
           
           {bloodAlcohol == 0 ?
           <Text style={styles.text_green}>{bloodAlcohol} ‰</Text> :

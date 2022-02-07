@@ -29,8 +29,9 @@ export default StyleSheet.create({
         color:'red',
         fontSize: 25,
     },
-    text: {
+    label: {
         marginBottom: 10,
+        fontWeight: 'bold',
     },
     result: {
         marginLeft: 20,

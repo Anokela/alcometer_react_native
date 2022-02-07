@@ -2,7 +2,7 @@ import { View, Text, Pressable, StyleSheet } from 'react-native';
 import React, { useState } from 'react';
 
 
-export default function RadioButton({options, onPress}) {
+export default function RadioButton({options, onPress, style}) {
     const [value, setValue] = useState(options[0].value);
 
     function handlePress(selected) {
@@ -17,7 +17,7 @@ export default function RadioButton({options, onPress}) {
         <View key={item.value} style={styles.buttonContainer}>
             <Text style={styles.label}>{item.label}</Text>
             <Pressable selected={item.selected} style={styles.circle} onPress={()=> handlePress(item.value)}>
-                {value === item.value && <View style={styles.checkedCircle}/>}
+                {value === item.value && <View style={[styles.checkedCircle, style]}/>}
             </Pressable>
         </View>
     ))
@@ -50,7 +50,7 @@ const styles =  StyleSheet.create({
         width: 15,
         height: 15,
         borderRadius: 7,
-        backgroundColor: 'skyblue',
+        backgroundColor: 'black',
     },
     label: {
         marginRight: 10,
