@@ -22,7 +22,7 @@ export default StyleSheet.create({
         color:'#258e25',
         fontSize: 25,
     },
-    text_yellow: {
+    text_orange: {
         color:'orange',
         fontSize: 25,
     },

@@ -1,3 +1,5 @@
+
+// Options for the bottles dropdown in the alcometer-component
 const bottles = [
     { label: '1 bottle', value: 1 },
     { label: '2 bottles', value: 2 },
@@ -24,6 +26,7 @@ const bottles = [
     { label: '23 bottles', value: 23 },
     { label: '24 bottles', value: 24 },
 ]
+  // Options for the hours dropdown in the alcometer-component
   const hours = [
     { label: '1 hour', value: 1 },
     { label: '2 hours', value: 2 },
@@ -51,6 +54,7 @@ const bottles = [
     { label: '24 hours', value: 24 },
   ];
 
+  // Options for the gender radiobuton in the alcometer-component
   const genders = [
     { label: 'Male', value: 'male'},
     { label: 'Female', value: 'female'}
