@@ -60,4 +60,4 @@ const bottles = [
     { label: 'Female', value: 'female'}
   ];
 
-  export default {bottles, hours, genders};
+  export {bottles, hours, genders};

@@ -3,7 +3,7 @@ import { Text, View, TextInput, Button, Alert } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import styles from '../styles/Styles.js';
 import RadioButton from './RadioButton.js';
-import constants from '../Data/Constants'; // import constants for rendering the options for radiobutton and for bottles and time pickers.  
+import {bottles, hours, genders } from '../Data/Constants'; // import constants for rendering the options for radiobutton and for bottles and time pickers.  
 
 
 
@@ -82,7 +82,7 @@ function setResultStyle(data) {
             onValueChange={(itemValue) => setBottle(itemValue)}
             selectedValue={bottle}
           >
-            {constants.bottles.map((bottles, index) => (
+            {bottles.map((bottles, index) => (
               <Picker.Item key={index} label={bottles.label} value={bottles.value} />
             ))
             }
@@ -94,7 +94,7 @@ function setResultStyle(data) {
             onValueChange={(itemValue) => setTime(itemValue)}
             selectedValue={time}
           >
-            {constants.hours.map((hours, index) => (
+            {hours.map((hours, index) => (
               <Picker.Item key={index} label={hours.label} value={hours.value} />
             ))
             }
@@ -103,7 +103,7 @@ function setResultStyle(data) {
         <View style={styles.field} >
           <Text style={styles.label}>Gender: </Text>
           <RadioButton 
-            options={constants.genders} 
+            options={genders} 
             onPress={(value) => {setGender(value)}} 
             style={{backgroundColor: 'skyblue'}}
           />
