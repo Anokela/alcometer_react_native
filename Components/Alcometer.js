@@ -79,7 +79,7 @@ export default function Alcometer () {
           <TextInput
             style={styles.input}
             onChangeText={text => setWeight(text)}
-            placeholder='in kilograms'
+            placeholder='weight in kilograms'
             keyboardType='numeric'
           ></TextInput>
         </View>
