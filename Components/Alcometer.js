@@ -142,8 +142,8 @@ export default function Alcometer () {
             title='Calculate'
           ></Button>
         </View>
+        <Footer />
       </ScrollView>
-      <Footer />
     </SafeAreaView>
   )
 }
