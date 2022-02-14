@@ -24,7 +24,7 @@ export default function Alcometer () {
 
   // implementing the alert to show when user tries to do calculation without inputting the weight.
   // This way of alertin seems not to work on webview. On could use javascrip alert() instead.
-  /*  const showAlert = () => {
+   const showAlert = () => {
     Alert.alert(
       "No weight entered.",
       "Please enter your weight.",
@@ -34,8 +34,8 @@ export default function Alcometer () {
         },
       ]
     );
-  } */
-
+  }
+  // function to calculate the blood alcohol level
   function calculate () {
     if (weight !== '') {
       let result = 0
@@ -53,12 +53,13 @@ export default function Alcometer () {
       }
       setBloodAlcohol(result)
     } else {
-      alert('Please enter your weight!') // works also on webview
-      // showAlert(); // This way seems not to work on webview but works on mobilephone (expoGo)
+      // alert('Please enter your weight!') // This way of alerting works also on webview
+      showAlert(); // This way seems not to work on webview but works on mobilephone (expoGo)
       return
     }
   }
 
+  // Function to select style for the result text
   function setResultStyle (data) {
     if (data.toFixed(2) === '0.00') {
       return styles.text_green
@@ -121,7 +122,7 @@ export default function Alcometer () {
             onPress={value => {
               setGender(value)
             }}
-            style={{ backgroundColor: 'skyblue' }}
+            style={{ backgroundColor: '#0080ff' }}
           />
         </View>
         <View style={styles.field}>
@@ -136,7 +137,7 @@ export default function Alcometer () {
         </View>
         <View style={styles.buttonContainer}>
           <Button
-            color='skyblue'
+            color='#0080ff'
             onPress={calculate}
             title='Calculate'
           ></Button>

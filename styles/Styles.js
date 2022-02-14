@@ -44,12 +44,12 @@ export default StyleSheet.create({
     },
     header: {
         marginBottom: 15,
-        backgroundColor: 'skyblue',
+        backgroundColor: '#0080ff',
         flexDirection: 'row',
       },
       footer: {
         marginTop: 20,
-        backgroundColor: 'skyblue',
+        backgroundColor: '#0080ff',
         flexDirection: 'row',
         paddingBottom: 35,
       },
