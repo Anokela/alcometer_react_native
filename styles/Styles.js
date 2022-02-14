@@ -7,16 +7,7 @@ export default StyleSheet.create({
         paddingTop: Platform.OS === 'android' ? Constants.statusBarHeight : 0,
     },
     field: {
-        margin: 10,
-    },
-    input: {
-        marginLeft: 10,
-        marginRight: 10,
-        borderStyle: 'solid',
-        borderColor:'black',
-        borderRadius: 5,
-        borderWidth: 1,
-        padding: 3,
+        margin: 5,
     }, 
     text_green: {
         color:'#258e25',
@@ -31,16 +22,14 @@ export default StyleSheet.create({
         fontSize: 25,
     },
     label: {
-        marginBottom: 10,
+        marginBottom: 5,
         fontWeight: 'bold',
     },
     result: {
         marginLeft: 20,
     },
     buttonContainer: {
-        width: '80%',
         alignSelf: 'center',
-        marginBottom: 20,
     },
     header: {
         marginBottom: 15,
@@ -69,5 +58,4 @@ export default StyleSheet.create({
         textAlign: 'center',
         margin: 10,
       },
-
   });
