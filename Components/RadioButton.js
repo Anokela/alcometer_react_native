@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 export default function RadioButton({options, onPress, style}) {
-    const [value, setValue] = useState(options[0].value);
+    const [value, setValue] = useState(options[0].value); // set the first value of "options" to default value
 
     function handlePress(selected) {
         setValue(selected);
