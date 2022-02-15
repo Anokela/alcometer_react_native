@@ -13,8 +13,8 @@ export default StyleSheet.create({
         color:'#258e25',
         fontSize: 25,
     },
-    text_orange: {
-        color:'orange',
+    text_yellow: {
+        color:'#ffcc33',
         fontSize: 25,
     },
     text_red: {
@@ -26,7 +26,9 @@ export default StyleSheet.create({
         fontWeight: 'bold',
     },
     result: {
-        marginLeft: 20,
+        marginBottom: 10,
+        textAlign: 'center',
+        
     },
     buttonContainer: {
         alignSelf: 'center',

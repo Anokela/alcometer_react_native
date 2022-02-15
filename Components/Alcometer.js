@@ -24,7 +24,7 @@ export default function Alcometer() {
   const [showTimeDropDown, setShowTimeDropDown] = useState(false);
 
   // implementing the alert to show when user tries to do calculation without inputting the weight or the weight is 0
-  // This way of alertin seems not to work on webview. On could use javascrip alert() instead.
+  // This way of alerting seems not to work on webview. On could use javascrip alert() instead.
   const showAlert = () => {
     Alert.alert(
       "Invalid input",
@@ -66,7 +66,7 @@ export default function Alcometer() {
     if (data.toFixed(2) === '0.00') {
       return styles.text_green;
     } else if (data.toFixed(2) < '0.5') {
-      return styles.text_orange;
+      return styles.text_yellow;
     } else {
       return styles.text_red;
     }
@@ -127,7 +127,7 @@ export default function Alcometer() {
           <View style={styles.field}>
             {bloodAlcohol !== null && (
               <View style={styles.result}>
-                <Text style={styles.label}>Calculated blood alcohol: </Text>
+                <Text style={styles.label}>Blood alcohol level: </Text>
                 <Text style={setResultStyle(bloodAlcohol)}>
                   {bloodAlcohol.toFixed(2)} ‰
                 </Text>
