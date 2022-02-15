@@ -27,7 +27,7 @@ export default function Alcometer() {
   // This way of alertin seems not to work on webview. On could use javascrip alert() instead.
   const showAlert = () => {
     Alert.alert(
-      "No weight entered.",
+      "Invalid input",
       "Please enter your weight.",
       [
         {
@@ -38,7 +38,11 @@ export default function Alcometer() {
   }
   // function to calculate the blood alcohol level
   function calculate() {
-    if (weight !== '') {
+    if (weight === '' || weight === '0') {
+      showAlert();
+      return;
+    }
+    else {
       let result = 0
       let litres = bottle * 0.33
       let grams = litres * 8 * 4.5
@@ -53,10 +57,6 @@ export default function Alcometer() {
         result = 0
       }
       setBloodAlcohol(result)
-    } else {
-      // alert('Please enter your weight!') // This way of alerting works also on webview
-      showAlert(); // This way seems not to work on webview but works on mobilephone (expoGo)
-      return
     }
   }
 
