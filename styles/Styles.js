@@ -45,7 +45,7 @@ export default StyleSheet.create({
         marginTop: 30,
         backgroundColor: '#0080ff',
         flexDirection: 'row',
-        paddingBottom: 50,
+        paddingBottom: 60,
       },
       title: {
         color: '#fff',
