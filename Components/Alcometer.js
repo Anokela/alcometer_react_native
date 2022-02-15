@@ -23,7 +23,7 @@ export default function Alcometer() {
   const [showBottlesDropDown, setShowBottlesDropDown] = useState(false);
   const [showTimeDropDown, setShowTimeDropDown] = useState(false);
 
-  // implementing the alert to show when user tries to do calculation without inputting the weight.
+  // implementing the alert to show when user tries to do calculation without inputting the weight or the weight is 0
   // This way of alertin seems not to work on webview. On could use javascrip alert() instead.
   const showAlert = () => {
     Alert.alert(
@@ -38,36 +38,37 @@ export default function Alcometer() {
   }
   // function to calculate the blood alcohol level
   function calculate() {
+    // To check if the user has inputted weight or the weight is not 0
     if (weight === '' || weight === '0') {
       showAlert();
       return;
     }
     else {
-      let result = 0
-      let litres = bottle * 0.33
-      let grams = litres * 8 * 4.5
-      let burning = weight.replace(',', '.') / 10
-      let grams_left = grams - burning * time
+      let result = 0;
+      let litres = bottle * 0.33;
+      let grams = litres * 8 * 4.5;
+      let burning = weight.replace(',', '.') / 10;
+      let grams_left = grams - burning * time;
       if (gender === 'male') {
-        result = grams_left / (weight.replace(',', '.') * 0.7)
+        result = grams_left / (weight.replace(',', '.') * 0.7);
       } else {
-        result = grams_left / (weight.replace(',', '.') * 0.6)
+        result = grams_left / (weight.replace(',', '.') * 0.6);
       }
       if (result < 0) {
-        result = 0
+        result = 0;
       }
-      setBloodAlcohol(result)
+      setBloodAlcohol(result);
     }
   }
 
   // Function to select style for the result text
   function setResultStyle(data) {
     if (data.toFixed(2) === '0.00') {
-      return styles.text_green
+      return styles.text_green;
     } else if (data.toFixed(2) < '0.5') {
-      return styles.text_orange
+      return styles.text_orange;
     } else {
-      return styles.text_red
+      return styles.text_red;
     }
   }
 
