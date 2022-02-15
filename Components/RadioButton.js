@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
         marginBottom: 15,
     },
     circle: {
-        height: 30,
-        width: 30,
+        height: 28,
+        width: 28,
         borderRadius: 15,
         borderWidth: 1,
         borderColor: '#000',
