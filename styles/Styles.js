@@ -27,7 +27,7 @@ export default StyleSheet.create({
     },
     result: {
         marginBottom: 10,
-        textAlign: 'center',
+        alignItems: 'center',
         
     },
     buttonContainer: {
